@@ -29,37 +29,39 @@
     </div>
 </div>
 <div id="transaction_area">
-     <div class="d-flex justify-content-between">
-          <div class="glass-card px-3 py-2">
-               <h4>Deposit</h4>
-               <h5 class="text-center">$ <span id="currentDeposit">00</span></h5>
+     <div class="glass-card p-5">
+          <div class="d-flex justify-content-between">
+               <div class="glass-card px-3 py-2">
+                    <h4>Deposit</h4>
+                    <h5 class="text-center">$ <span id="currentDeposit">00</span></h5>
+               </div>
+               <div class="glass-card px-3 py-2">
+                    <h4>Withdraw</h4>
+                    <h5 class="text-center">$ <span id="currentWithdraw">00</span></h5>
+               </div>
           </div>
-          <div class="glass-card px-3 py-2">
-               <h4>Withdraw</h4>
-               <h5 class="text-center">$ <span id="currentWithdraw">00</span></h5>
+          <div class="d-flex justify-content-center">
+               <div class="glass-card px-3 py-2">
+                    <h4>Total Balance</h4>
+                    <h5 class="text-center">$ <span id="currentBalance">1720</span></h5>
+               </div>
           </div>
-     </div>
-     <div class="d-flex justify-content-center">
-          <div class="glass-card px-3 py-2">
-               <h4>Total Balance</h4>
-               <h5 class="text-center">$ <span id="currentBalance">1720</span></h5>
-          </div>
-     </div>
-<br><br>
-     <div class="d-flex justify-content-between">
-          <div class="glass-card px-3 py-2">
-               <h5 class="text-center">Deposit</h5>
-               <input type="" class="form-control" id="addDeposit" placeholder="Deposit your balance..">
-               <div class="d-flex justify-content-center mt-2"> 
-                    <button type="submit" id="diposit" class="btn btn-info">Deposit</button>
-                </div>
-          </div>
-          <div class="glass-card px-3 py-2">
-               <h5 class="text-center">Withdraw</h5>
-               <input type="" class="form-control" id="withdraw-amount" placeholder="Deposit your balance..">
-               <div class="d-flex justify-content-center mt-2"> 
-                    <button type="submit" id="addWithdraw" class="btn btn-info">Withdraw</button>
-                </div>
+     <br><br>
+          <div class="d-flex justify-content-between">
+               <div class="glass-card px-3 py-2">
+                    <h5 class="text-center">Deposit</h5>
+                    <input type="" class="form-control" id="addDeposit" placeholder="Deposit your balance..">
+                    <div class="d-flex justify-content-center mt-2"> 
+                         <button type="submit" id="diposit" class="btn btn-info">Deposit</button>
+                     </div>
+               </div>
+               <div class="glass-card px-3 py-2">
+                    <h5 class="text-center">Withdraw</h5>
+                    <input type="" class="form-control" id="withdraw-amount" placeholder="Deposit your balance..">
+                    <div class="d-flex justify-content-center mt-2"> 
+                         <button type="submit" id="addWithdraw" class="btn btn-info">Withdraw</button>
+                     </div>
+               </div>
           </div>
      </div>
 </div>
@@ -67,23 +69,7 @@
 
  </main>
      <script>
-  //widraw button handle
-          const addWithdraw = document.getElementById('addWithdraw');
-          addWithdraw.addEventListener('click',function(){
-               
-               const withdrawAmount = document.getElementById('withdraw-amount').value;
-               const withdrawAmountNumber = parseFloat(withdrawAmount);
-
-               const currentWithdraw = document.getElementById('currentWithdraw').innerText;
-               const currentWithdrawNumber = parseFloat(currentWithdraw);
-               const totalWithdraw = withdrawAmountNumber + currentWithdrawNumber;
-               document.getElementById('currentWithdraw').innerText = totalWithdraw;
-      
-               
-               document.getElementById('withdraw-amount').value = '';
-
-          })
-           
+  
      </script>
        <script src="script.js"></script>
 </body>
