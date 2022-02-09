@@ -13,6 +13,8 @@ backdrop-filter: blur(1.6px);
 -webkit-backdrop-filter: blur(1.6px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.transaction-area{
-     display:none;
+
+#transaction_area{
+     display: none;
 }
+
